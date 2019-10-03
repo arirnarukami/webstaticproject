@@ -1,6 +1,5 @@
 # webstaticproject
-a simple static web for completing group assignments
-for a preview, you can access it on https://tutorjs3000.000webhostapp.com
+a simple static web for completing group assignments, for a preview, you can access it on https://tutorjs3000.000webhostapp.com
 
 created by : 
  1. Johanadi Santoso
@@ -8,3 +7,4 @@ created by :
  3. Rizky Syaiful F.
  4. Syahrir A. M.
  5. Mohamad Aryarafi D.
+@ Informatics, Diponegoro University
