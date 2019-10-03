@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array in Javascript</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="navbar" id="myNavbar">
+			<a id="home" href="index.html">TutorJS3000</a>
+			<a href="about.html">About</a>
+			<a href="#">Quiz</a>
+			<a href="index.html">Main</a>
+		</div>
+		<div class="header about">
+			<h1> LET'S CODE TOGETHER </h1>
+			<p>Docendo Discimus // By Teaching We Learn</p>
+		</div>
+		<script type="text/javascript" src="stick.js"></script>
+		
+		<!--judul artikel-->
+		<h1 class="subtitle">Array in Javascript</h1>
+		<h6 id="writer"> Writer: <a href="about.html#arya">M. Aryarafi Danendra</a></h6>
+		<hr class="divider">
+		
+		<!--Edit disini, cek bootstrap grid-->
+		<div class="row" style="width:100%">
+			<div class="col-sm-3"></div>
+
+
+			<div class="col-sm-6">
+				<div class="row">
+
+					<!-- mau dikasih <hr> tapi warnanya putih bg :( -->
+
+					<h4>Array</h4>
+					<hr>						
+					<p>Array adalah variabel khusus yang dapat menyimpan value lebih dari satu.</p>
+
+					Syntax :
+						<pre>var <i>nama_array</i> = [item1, item2,...];</pre>
+					<br>
+					<p>Contoh dan cara-cara alternatif menuliskan array:</p>
+						<pre>var motor = ["ducati", "r25", "ninja"]; </pre>
+						<pre>var motor = [20,
+	60,
+	120
+];</pre>
+					<br>
+
+
+					<h4>Mengakses Array</h4>
+					<hr>
+					<p>Cara mengakses elemen dalam array adalah dengan indeks. Pada array, indeks dimulai dari 0.
+						<pre>var motor = cars[0];</pre>
+						<pre>var motor = ["ducati", "r25", "ninja"]; 
+document.getElementById("demo").innerHTML = motor[0];</pre>
+					
+					Hasilnya adalah <code>ducati</code>.
+					<br>
+					<br>
+					<p>
+						Cara mengakses array secara keseluruhan adalah sebagai berikut.
+							<pre>var motor = ["ducati", "r25", "ninja"]; 
+document.getElementById("demo").innerHTML = motor;</pre>
+					</p>
+					</p>
+					<br>
+
+
+					<h4>Mengubah Elemen pada Array</h4>
+					<hr>
+					<p>
+						Cara mengubah elemen pada array adalah sebagai berikut.
+						<pre>var motor = ["ducati", "r25", "ninja"]; 
+motor[0] = "beat";
+document.getElementById("demo").innerHTML = motor[0];</pre>
+					</p>
+					<br>
+
+
+					<h4>Looping Elemen Array</h4>
+					<hr>
+					<p>Cara looping elemen teraman dalam array adalah dengan <code>for</code>.
+
+						<pre>var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;</pre>
+					
+					<p>Hasilnya adalah</p> 
+					<!-- kasih bakground jg bangg -->
+						<ul>
+							<li>Banana</li>
+							<li>Orange</li>
+							<li>Apple</li>
+							<li>Mango</li>
+						</ul>
+					
+					<p>Cara lainnya adalah dengan menggunakan <code>Array.forEach()</code>.</p>
+					<pre>var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+}</pre>
+					</p>
+					<br>
+
+
+					<h4>Menambah Elemen Array</h4>
+					<hr>
+					<p>Cara termudah menambah elemen ke array adalah dengan method <code>push()</code>.
+						<pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Lemon");</pre>
+					<br>
+					</p>
+
+
+					<h4>Perbedaan Array dan Object</h4>
+					<hr>
+					<p>Di JavaScript, array memakai index angka.  
+					Di JavaScript, object memakai index bernama.
+					</p>
+					<br>
+					<h5>Kapan Pakai Array? Kapan Pakai Object?</h5>
+					<br>
+					JavaScript tidak mendukung associative array.
+					Object dipakai jika nama elemennya berupa string.
+					Array dipakai jika nama elemennya berupa angka. 
+					<br>
+					</p>
+					<br>
+
+
+				<p>Semua artikel disadur dari W3School.com.</p>
+
+
+
+				</div>
+			</div>
+
+
+			<div class="col-sm-3"></div>
+		</div>
+		<div class="footer">
+		  <div>© 2019 Copyright. TutorJS3000.
+		  </div>
+		</div>
+	</body>
+</html>

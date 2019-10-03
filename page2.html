@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Math in Javascript</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/math.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+		<div class="navbar" id="myNavbar">
+			<a id="home" href="index.html">TutorJS3000</a>
+			<a href="about.html">About</a>
+			<a href="quiz.html">Quiz</a>
+			<a href="index.html">Main</a>
+		</div>
+		<div class="header about">
+			<h1> LET'S CODE TOGETHER </h1>
+			<p>Docendo Discimus // By Teaching We Learn</p>
+		</div>
+		<script type="text/javascript" src="stick.js"></script>
+
+	<!--judul artikel-->
+	<h1 class="subtitle">Math in Javascript</h1>
+	<h6 id="writer"> Writer: <a href="about.html#johan">johanadi santoso</a></h6>
+	<hr class="divider">
+
+	<!--Edit disini, cek bootstrap grid-->
+	<div class="row" style="width:100%">
+		<div class="col-sm-3"></div>
+
+		<div class="col-sm-6">
+			<table class="row">
+
+				<div class="sub_bab">
+					<h4>Math</h4>
+					<hr>
+					<p>Objek JavaScript Matematika memungkinkan untuk melakukan tugas matematika pada angka.</p>
+					Contoh :
+					<pre>Math.PI; </pre>
+					Math.PI akan menghasilkan nilai <code>3.141592653589793</code>
+					<br>
+
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.round()</h4>
+					<hr>
+					<p>Math.round (x) mengembalikan nilai x dibulatkan ke bilangan bulat terdekatnya(melakukan
+						pembulatan):
+						<pre>Math.round(4.7);</pre>
+						Hasilnya adalah <code>5</code>.
+						<pre>Math.round(4.4);</pre>
+						Hasilnya adalah <code>4</code>.
+						<br>
+						<br>
+				</div>
+				<div class="sub_bab">
+
+					<h4>Math.pow ()</h4>
+					<hr>
+					<p>Math.pow(x, y) mengembalikan hasil dari nilai x pangkat y:
+						<pre>Math.pow(8, 2);  </pre>
+						Hasilnya adalah <code>64</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.sqrt ()</h4>
+					<hr>
+					<p>Math.sqrt(x) mengembalikan akar kuadrat dari x:
+						<pre>Math.sqrt(64); </pre>
+						Hasilnya adalah <code>8</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.abs ()</h4>
+					<hr>
+					<p>Math.abs(x) mengembalikan mutlak nilai (positif) dari x:
+						<pre>Math.abs(-4.7); </pre>
+						Hasilnya adalah <code>4.7</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.ceil ()</h4>
+					<hr>
+					<p>Math.ceil(x) mengembalikan nilai x dibulatkan ke atas integer terdekatnya( <b>Pembulatan ke
+							atas</b> ):
+						<pre>Math.ceil(4.4);</pre>
+						Hasilnya adalah <code>5</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.floor ()</h4>
+					<hr>
+					<p>Math.floor(x)mengembalikan nilai x dibulatkan ke bawah integer terdekatnya( <b>Pembulatan ke
+							bawah</b> ):
+						<pre>Math.floor(4.7);  </pre>
+						Hasilnya adalah <code>4</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.sin ()</h4>
+					<hr>
+					<p>Math.sin(x) mengembalikan sinus (nilai antara -1 dan 1) dari sudut x (diberikan dalam radian).
+
+						Jika Anda ingin menggunakan derajat bukan radian, Anda harus mengkonversi derajat ke radian:
+
+						Sudut dalam radian = sudut dalam derajat x PI / 180.
+						<pre>Math.sin(90 * Math.PI / 180); </pre>
+						Kode diatas akan menghitung <b> Sin dari 90 * &prod; /180</b>, Hasilnya adalah <code>1</code> .
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.cos ()</h4>
+					<hr>
+					<p>Math.cos(x) mengembalikan kosinus (nilai antara -1 dan 1) dari sudut x (diberikan dalam radian).
+
+						Jika Anda ingin menggunakan derajat bukan radian, Anda harus mengkonversi derajat ke radian:
+
+						Sudut dalam radian = sudut dalam derajat x PI / 180.
+						<pre>Math.cos(0 * Math.PI / 180); </pre>
+						Kode diatas akan menghitung <b> Cos dari 90 * &prod; /180</b>, Hasilnya adalah <code>1</code> .
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.min () dan Math.max ()</h4>
+					<hr>
+					<p>Math.min()dan Math.max()dapat digunakan untuk mencari nilai terendah atau tertinggi dalam daftar
+						argumen:
+						<pre>Math.min(0, 150, 30, 20, -8, -200);</pre>
+						Hasilnya adalah <code>-200</code>.
+						<pre>Math.max(0, 150, 30, 20, -8, -200); </pre>
+						Hasilnya adalah <code>150</code>.
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Math.random ()</h4>
+					<hr>
+					<p>Math.random() mengembalikan nomor acak antara 0 (inklusif), dan 1 (eksklusif):
+						<pre>Math.random(); </pre>
+						Contoh:
+						<pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript Math.random()&lt;/h2&gt;
+
+&lt;p&gt;Math.random() returns a random number between 0 and 1:&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerHTML = Math.random();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+						Hasilnya adalah
+
+						<div id="hasil_random">
+							<!DOCTYPE html>
+							<html>
+
+							<body>
+
+								<h2>JavaScript Math.random()</h2>
+
+								<p>Math.random() returns a random number between 0 and 1:</p>
+
+								<p id="demo"></p>
+
+								<script>
+									document.getElementById("demo").innerHTML = Math.random();
+								</script>
+
+							</body>
+
+							</html>
+						</div>
+
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>Matematika Properties (Konstanta))</h4>
+					<hr>
+					<p>JavaScript menyediakan 8 konstanta matematika yang dapat diakses dengan objek Math:
+						<pre>
+Math.E			// mengembalikan nomor Euler
+Math.PI 		// mengembalikan PI
+Math.SQRT2 		// mengembalikan akar kuadrat dari 2
+Math.SQRT1_2		// mengembalikan akar kuadrat dari 1/2
+Math.LN2 		// mengembalikan logaritma natural 2
+Math.LN10 		// mengembalikan logaritma natural dari 10
+Math.LOG2E 		// mengembalikan basis 2 logaritma E
+Math.LOG10E		// mengembalikan basis 10 logaritma E
+					</pre>
+					</p>
+					<br>
+				</div>
+
+				<div class="sub_bab">
+					<h4>matematika Constructor</h4>
+					<hr>
+					<p>Tidak seperti objek global lainnya, objek Math tidak memiliki konstruktor. Metode dan properti
+						yang statis.
+
+						Semua metode dan properti (konstanta) dapat digunakan tanpa menciptakan sebuah objek Math
+						pertama.
+					</p>
+					<br>
+				</div>
+
+				<h4>Metode matematika Obyek</h4>
+				<div style="overflow-x:auto;">
+					<table class="math-table">
+						<tr>
+							    <th style="width: 20%"> Metode </th>
+							    <th> Keterangan </th>
+							  </tr>
+						  <tr>
+							    <td> abs (x) </td>
+							    <td> Mengembalikan nilai absolut x </td>
+							  </tr>
+						  <tr>
+							    <td> acos (x) </td>
+							    <td> Mengembalikan arccosine x, dalam radian </td>
+							  </tr>
+						  <tr>
+							    <td> asin (x) </td>
+							    <td> Mengembalikan arcsine x, dalam radian </td>
+							  </tr>
+						  <tr>
+							    <td> atan (x) </td>
+							    <td> Mengembalikan arctangent dari x sebagai nilai numerik antara -PI / 2 dan PI
+								/ 2
+								radian </td>
+							  </tr>
+						  <tr>
+							    <td> atan2 (y, x) </td>
+							    <td> Mengembalikan arctangent dari hasil bagi argumennya </td>
+							  </tr>
+						  <tr>
+							    <td> ceil (x) </td>
+							    <td> Mengembalikan nilai x yang dibulatkan ke bilangan bulat terdekatnya </td>
+							  </tr>
+						  <tr>
+							    <td> cos (x) </td>
+							    <td> Mengembalikan cosinus x (x dalam radian) </td>
+							  </tr>
+						  <tr>
+							    <td> exp (x) </td>
+							    <td> Mengembalikan nilai E <sup> x </sup> </td>
+							  </tr>
+						  <tr>
+							    <td> lantai (x) </td>
+							    <td> Mengembalikan nilai x yang dibulatkan ke bilangan bulat terdekatnya </td>
+							  </tr>
+						  <tr>
+							    <td> log (x) </td>
+							    <td> Mengembalikan logaritma natural (basis E) dari x </td>
+							  </tr>
+						  <tr>
+							    <td> maks (x, y, z, ..., n) </td>
+							    <td> Mengembalikan nomor dengan nilai tertinggi </td>
+							  </tr>
+						  <tr>
+							    <td> mnt (x, y, z, ..., n) </td>
+							    <td> Mengembalikan nomor dengan nilai terendah </td>
+							  </tr>
+						  <tr>
+							    <td> pow (x, y) </td>
+							    <td> Mengembalikan nilai x ke kekuatan y </td>
+							  </tr>
+						  <tr>
+							    <td> acak () </td>
+							    <td> Mengembalikan angka acak antara 0 dan 1 </td>
+							  </tr>
+						  <tr>
+							    <td> ronde (x) </td>
+							    <td> Mengembalikan nilai x dibulatkan ke bilangan bulat terdekat </td>
+							  </tr>
+						  <tr>
+							    <td> sin (x) </td>
+							    <td> Mengembalikan sinus x (x dalam radian) </td>
+							  </tr>
+						  <tr>
+							    <td> sqrt (x) </td>
+							    <td> Mengembalikan akar kuadrat x </td>
+							  </tr>
+						  <tr>
+							    <td> tan (x) </td>
+							    <td> Mengembalikan garis singgung dari suatu sudut </td>
+							  </tr>
+					</table>
+					<br>
+					<p><i>Artikel ini diambil dari W3School.com.</i></p>
+
+				</div>
+			<div class="col-sm-3"></div>
+		</div>
+	</div>
+		<div class="footer">
+		  <div>© 2019 Copyright. TutorJS3000.
+		  </div>
+		</div>
+</body>
+
+</html>

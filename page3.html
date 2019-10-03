@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random in Javascript</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="navbar" id="myNavbar">
+			<a id="home" href="index.html">TutorJS3000</a>
+			<a href="about.html">About</a>
+			<a href="quiz.html">Quiz</a>
+			<a href="index.html">Main</a>
+		</div>
+		<div class="header about">
+			<h1> LET'S CODE TOGETHER </h1>
+			<p>Docendo Discimus // By Teaching We Learn</p>
+		</div>
+		<script type="text/javascript" src="stick.js"></script>
+		
+		<!--judul artikel-->
+		<h1 class="subtitle">Random in Javascript</h1>
+		<h6 id="writer"> Writer: <a href="about.html#ainun">A. Ainun Herlambang</a></h6>
+		<hr class="divider">
+		
+		<!--Edit disini, cek bootstrap grid-->
+		<div class="row" style="width:100%">
+			<div class="col-sm-3"></div>
+
+
+			<div class="col-sm-6">
+				<div class="row">
+
+					<!-- mau dikasih <hr> tapi warnanya putih bg :( -->
+					
+					<p>Random merupakan salah satu fasilitas yang sering digunakan
+						untuk mendapatkan angka secara acak. Ada beberapa fungsi 
+						yang bisa digunakan sesuai kebutuhan.</p>
+					<br>
+					<h4>Math.Random()</h4>
+					<hr>						
+					<p>Digunakan untuk mendapatkan angka antara 0(inklusif) sampai 1(eksklusif).</p>
+
+					Syntax :
+						<pre>Math.random();</pre>
+					<br>
+					<p>Math.random() selalu return nilai di bawah 1</p>
+						
+						
+					<br>
+
+
+					<h4>Random Integer</h4>
+					<hr>
+					<p>Math.random() dengan Math.Floor dapat digunakan untuk
+						return angka integer.
+						<pre>Math.floor(Math.random() * 10);</pre>
+					<p>Kode tersebut akan return nilai acak antara 0 sampai 9</p>
+
+					<br>
+					
+						<pre>Math.floor(Math.random() * 11);</pre>
+					<p>Kode tersebut akan return nilai acak antara 0 sampai 10</p>
+					
+					<br>
+					
+					<h4>Fungsi Acak yang Benar</h4>
+					<hr>
+					<p> Dari beberapa contoh di atas, ada cara yang biasa 
+					digunakan untuk return nilai acak sesuai kebutuhan.
+					<br>
+					Fungsi Javascript ini selalu return nilai acak antara
+					min(included) dan max(excluded):
+						<pre>function getRndInteger(min, max) {<br>
+return Math.floor(Math.random() * (max - min) ) + min;}</pre>
+					<br>
+					Sedangkan fungsi Javascript berikut akan return nilai acak antara
+					min dan max(keduanya included):
+						<pre>function getRndInteger(min, max) {<br>
+return Math.floor(Math.random() * (max - min + 1) ) + min;}</pre>
+
+					</p>
+					<br>
+
+					<!-- kasih bakground jg bangg -->
+			
+
+
+				<p>Semua artikel disadur dari W3School.com.</p>
+
+
+
+				</div>
+			</div>
+
+
+			<div class="col-sm-3"></div>
+		</div>
+		<div class="footer">
+		  <div>© 2019 Copyright. TutorJS3000.
+		  </div>
+		</div>
+	</body>
+</html>

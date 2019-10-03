@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learning date objects in JavaScript</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="navbar" id="myNavbar">
+			<a id="home" href="index.html">TutorJS3000</a>
+			<a href="about.html">About</a>
+			<a href="quiz.html">Quiz</a>
+			<a href="index.html">Main</a>
+		</div>
+		<div class="header about">
+			<h1> LET'S CODE TOGETHER </h1>
+			<p>Docendo Discimus // By Teaching We Learn</p>
+		</div>
+		<script type="text/javascript" src="stick.js"></script>
+		
+		<!--judul artikel-->
+		<h1 class="subtitle">Learning date objects in JavaScript</h1>
+		<h6 id="writer"> Writer: <a href="about.html#syaiful">Rizky Syaiful Fattah</a></h6>
+		<hr class="divider">
+		
+		<!--Edit disini, cek bootstrap grid-->
+		<div class="row" style="width:100%">
+			<div class="col-sm-3"></div>
+
+
+			<div class="col-sm-6">
+				<div class="row">
+
+					<!-- mau dikasih <hr> tapi warnanya putih bg :( -->
+
+					<h4>Date Objects</h4>
+					<hr>						
+					<p>Disini kita akan belajar tentang date/tanggal. 
+					secara default, JavaScript akan menggunakan waktu yang ada di browser dan menampilkannya sebagai sebuah string,<br> contohnya:
+					<b>Sun Sep 08 2019 21:21:21 GMT +0700 (Western Indonesia Time)</b></p>
+
+					<p>Objek tanggal dibentuk dengan konstruktor <code>new Date()</code>.<br>
+					Berikut adalah 4 cara untuk membuat objek tanggal :</p>
+						<pre>new Date()<br>new Date(<i>year, month, day, hours, minutes, seconds, milliseconds</i>)<br>new Date(<i>milliseconds</i>)<br>new Date(<i>date string</i>)</pre>
+						
+					<h4>new Date()</h4>
+					<hr>
+					<p>contoh syntax objek tanggal diatas :</p>
+						<pre>var d = new Date();<br>--> objek tanggal dengan tanggal dan waktu saat ini<br>hasilnya : Sun Sep 08 2019 21:21:21 GMT +0700 (Western Indonesia Time)</pre>
+					
+					<h4>new Date(year, month, ...)</h4>
+					<hr>
+					<p>pada syntax <code>new Date(<i>year, month, day, hours, minutes, seconds, milliseconds</i>)</code> dapat diubah jumlah parameternya dari 6 hingga 2 (year, month).</br>
+					<b>penghitungan bulan dari 0-11 dengan januari 0 dan desember 11.</b></p>
+						<pre>var d = new Date(2018, 11, 24, 10, 33, 30, 0);<br>--> year, month, day, hours, minutes, seconds, milliseconds</pre>
+						<pre>var d = new Date(2018, 11, 24, 10, 33, 30);<br>--> year, month, day, hours, minutes, seconds</pre>
+						<pre>var d = new Date(2018, 11, 24, 10, 33);<br>--> year, month, day, hours, minutes</pre>
+						<pre>var d = new Date(2018, 11, 24, 10);<br>--> year, month, day, hours</pre>
+						<pre>var d = new Date(2018, 11, 24);<br>--> year, month, day</pre>
+						<pre>var d = new Date(2018, 11);<br>--> year, month</pre>
+					
+					<h4>new Date(dateString)</h4>
+					<hr>
+					<p>syntax ini membuat objek tanggal dari string tanggal yang diinput</p>	
+						<pre>var d = new Date("September 11, 2019 20:20:20");<br>hasilnya : Wed Sep 11 2019 20:20:20 GMT +0700 (Western Indonesia Time)</pre>
+					
+					<h4>JavaScript menyimpan tanggal sebagai bentuk milisekon</h4>
+					<hr>
+					<p>bentuk milisekon ini sejak 1 Januari 1970, 00:00:00 UTC<br>
+					<b>zero time adalah January 01, 1970 00:00:00 UTC<br>
+					satu hari adalah 86400000 milisekon</b></p>
+						<pre>var d = new Date(10000000) --> parameter milisekon;<br>hasilnya Sat Mar 03 1973 16:46:40 GMT+0700 (Western Indonesia Time)</pre>
+					
+					<h4>penanggalan berdasarkan abad waktu</h4>
+					<hr>
+					<p>satu dan dua digit tahun akan diinterpretasikan sebagai 19xx :</p>
+						<pre>var d = new Date(99, 11, 24);<br>hasilnya : Fri Dec 24 1999 00:00:00 GMT+0700 (Western Indonesia Time)</pre>					
+					
+					<h4>menampilkan tanggalan</h4>
+					<hr>
+					<p>JavaScript secara default akan mengeluarkan tanggal dalam bentuk text format string :<br>
+					<b>Wed Mar 25 2015 07:00:00 GMT+0700 (Western Indonesia Time).</b><br>
+					metode <code>toString()</code>, menampilkan objek tanggal dalam HTML diubah ke string<br>
+					metode <code>toUTCString()</code>, mengubah tanggal ke string bentuk UTC<br>
+					metode <code>toDateString()</code>, mengubah tanggal ke format yang mudah dibaca</p>
+					<pre>d = new Date();<br>document.getElementById("demo").innerHTML = d.toString();</pre>
+					<pre>d = new Date();<br>document.getElementById("demo").innerHTML = d.toUTCString();</pre>
+					<pre>d = new Date();<br>document.getElementById("demo").innerHTML = d.toDateString();</pre>
+				<br>
+				<p>Semua artikel disadur dari W3School.com.</p>
+				</div>
+			</div>
+
+
+			<div class="col-sm-3"></div>
+		</div>
+		<div class="footer">
+		  <div>© 2019 Copyright. TutorJS3000.
+		  </div>
+		</div>
+	</body>
+</html>

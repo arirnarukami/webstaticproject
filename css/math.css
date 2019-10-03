@@ -1,0 +1,44 @@
+table,
+th,
+td {
+	animation-iteration-count: infinite;
+	border: 1px solid black;
+
+}
+
+table {
+	width: 100%;
+}
+
+td,
+th {
+	padding: 8px;
+}
+
+th {
+	background-color: rgb(0, 195, 255);
+	color: black;
+	text-align: center;
+	height: 30px;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(0, 255, 255, 0.493);
+}
+
+td {
+	background-color: rgba(0, 255, 255, 0.212);
+}
+
+
+#hasil_random {
+	border: 3px dotted burlywood;
+	padding: 8px;
+	background: rgba(0, 255, 255, 0.212);
+}
+
+.sub_bab {
+	background: rgba(255, 240, 189, 0.253);
+	padding: 8px;
+	border: 2px solid rgb(223, 199, 168);
+}
