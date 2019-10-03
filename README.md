@@ -7,4 +7,5 @@ created by :
  3. Rizky Syaiful F.
  4. Syahrir A. M.
  5. Mohamad Aryarafi D.
+
 @ Informatics, Diponegoro University
